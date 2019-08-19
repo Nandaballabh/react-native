@@ -17,10 +17,16 @@
 #import <React/RCTConvert.h>
 #import <React/RCTDefines.h>
 #import <React/RCTLog.h>
-#import <React/RCTPackagerClient.h>
+#import "RCTPackagerClient.h"
+#import <React/RCTUtils.h>
+
+#if __has_include(<React/RCTReconnectingWebSocket.h>)
 #import <React/RCTReconnectingWebSocket.h>
 #import <React/RCTSRWebSocket.h>
-#import <React/RCTUtils.h>
+#else
+#import <RCTWebSocket/RCTReconnectingWebSocket.h>
+#import <RCTWebSocket/RCTSRWebSocket.h>
+#endif
 
 #if RCT_DEV
 @interface RCTPackagerConnection () <RCTReconnectingWebSocketDelegate>

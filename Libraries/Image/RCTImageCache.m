@@ -12,11 +12,17 @@
 #import <ImageIO/ImageIO.h>
 
 #import <React/RCTConvert.h>
-#import <React/RCTNetworking.h>
+
 #import <React/RCTUtils.h>
-#import <React/RCTResizeMode.h>
+#import "RCTResizeMode.h"
 
 #import "RCTImageUtils.h"
+
+#if __has_include(<React/RCTNetworking.h>)
+#import <React/RCTNetworking.h>
+#else
+#import <RCTNetwork/RCTNetworking.h>
+#endif
 
 static const NSUInteger RCTMaxCachableDecodedImageSizeInBytes = 2097152; // 2 MB
 

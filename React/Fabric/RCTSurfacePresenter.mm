@@ -18,6 +18,7 @@
 #import <React/RCTComponentViewRegistry.h>
 #import <React/RCTFabricSurface.h>
 #import <React/RCTFollyConvert.h>
+#import <RCTImage/RCTImageLoader.h>
 #import <React/RCTImageLoader.h>
 #import <React/RCTMountingManager.h>
 #import <React/RCTMountingManagerDelegate.h>
